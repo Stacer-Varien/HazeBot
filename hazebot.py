@@ -1,7 +1,7 @@
 # This is a very old bot which has been replaced by a legacy version called Server Utilities.
-# It was almost working like LOA Aspect for those in the LOA server. This runs on discordpy 1.7.3 
+# It was almost working like LOA Aspect for those in the LOA server. This runs on discordpy 1.7.3
 # with discord-py-interactions 3.0.2. You can try for yourself but I won't guarantee satisfying
-# results. The maintainance I had on this bot was extremely bad because it was my 2nd bot to make
+# results. The maintainance I had on this bot was extremely bad because it was my 3rd bot to make
 # over a short period of time.
 
 import os
@@ -25,9 +25,9 @@ HAZE = 740584420645535775
 dark_theme_memes = 719351307814830160
 nells_haram = harem = 853079649072316427
 
-#botbanned users
+# botbanned users
 banned_users = [855824458363306064, 800437162343792680, 804529522082840576]
-botbanned_msg="You cannot use this command because you have been botbanned"
+botbanned_msg = "You cannot use this command because you have been botbanned"
 
 intents = discord.Intents().all()
 bot = commands.Bot(command_prefix='hz!', intents=intents)
@@ -40,7 +40,6 @@ bot.load_extension("HAZE.stuff")
 bot.load_extension("applied.security")
 bot.load_extension("applied.DTM_welcomer")
 bot.load_extension("applied.dickheads")
-
 
 
 @bot.event
@@ -91,11 +90,10 @@ async def partic(ctx: ComponentContext):
     ended_contest = "Contest has ended.\nPlease wait for a new contest"
     await ctx.send(content=ended_contest, hidden=True)
 
-
-#       HAZES=bot.get_guild(HAZE)
-#       partic_role=get(HAZES.roles, name="Participant")
-#       await ctx.author.add_roles(partic_role)
-#      await ctx.send("You are now able to participate in the Art #Contest. Made sure you read the rules in #<#910132313915006997> and submit in #<#910132270155853844>.\nGood luck", hidden=True)
+    # HAZES=bot.get_guild(HAZE)
+    # partic_role=get(HAZES.roles, name="Participant")
+    # await ctx.author.add_roles(partic_role)
+    # await ctx.send("You are now able to participate in the Art #Contest. Made sure you read the rules in <#910132313915006997> and submit in #<#910132270155853844>.\nGood luck", hidden=True)
 
 load_dotenv()
 TOKEN = os.getenv("token")
