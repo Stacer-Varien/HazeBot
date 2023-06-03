@@ -12,27 +12,12 @@ horny_jail= 903387713372319765
 
 HEAD_OFFICER_ID = 762318708596015114
 
-vtapi = "0698b930227d29f3c953b85f2949e894554a263d773975d98feb94c51ba4ef3c"
-
-vtapi2 = "f14c16fa3c1459bf63c076c2a64177f6db953318756af1b98f0a922a7dce746f"
-
-vtapi3 = "6bb9aaaa71b928b16d96314db192509345cd29cda305d7f5e1b08dc778f5b2e8"
-
-vtapi4 = "88c28f7a7ad92195e07ef30524a8cde164ba91a25bfd106c1b3f1b4b75401ce7"
+vtapi = ... #my VTAPI was here
 
 try:
     vtclient = vt.Client(vtapi)
 except APIError:    
-    try:
-        vtclient = vt.Client(vtapi2)
-    except APIError:
-        try:
-            vtclient = vt.Client(vtapi3)
-        except APIError:
-            try:
-                vtclient = vt.Client(vtapi4)
-            except APIError:
-                pass
+    pass
 
 
 class punishment(commands.Cog):
